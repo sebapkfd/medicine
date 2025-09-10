@@ -9,6 +9,8 @@ defmodule Medicine.Practitioners.Practitioner do
     field :birthdate, :string
     field :email, :string
 
+    has_many :prescriptions, Medicine.Prescriptions.Prescription
+
     timestamps(type: :utc_datetime)
   end
 

@@ -6,6 +6,7 @@ defmodule Medicine.Prescriptions.Prescription do
     field :detail, :string
 
     belongs_to :patient, Medicine.Patients.Patient
+    belongs_to :practitioner, Medicine.Practitioners.Practitioner
 
     timestamps(type: :utc_datetime)
   end
