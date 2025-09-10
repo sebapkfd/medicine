@@ -23,6 +23,8 @@ defmodule MedicineWeb.Router do
   scope "/admin", MedicineWeb.Admin do
       pipe_through :api
       resources "/patients", PatientController
+      resources "/practitioners", PractitionerController
+
     end
 
 
