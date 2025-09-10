@@ -5,6 +5,8 @@ defmodule Medicine.Prescriptions.Prescription do
   schema "prescriptions" do
     field :detail, :string
 
+    belongs_to :patient, Medicine.Patients.Patient
+
     timestamps(type: :utc_datetime)
   end
 
