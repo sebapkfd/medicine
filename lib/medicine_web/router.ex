@@ -20,6 +20,12 @@ defmodule MedicineWeb.Router do
     get "/", PageController, :home
   end
 
+  scope "/admin", MedicineWeb.Admin do
+      pipe_through :api
+      resources "/patients", PatientController
+    end
+
+
   # Other scopes may use custom stacks.
   # scope "/api", MedicineWeb do
   #   pipe_through :api
