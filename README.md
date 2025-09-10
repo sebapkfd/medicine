@@ -16,3 +16,31 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 * Docs: https://hexdocs.pm/phoenix
 * Forum: https://elixirforum.com/c/phoenix-forum
 * Source: https://github.com/phoenixframework/phoenix
+
+## Comandos
+
+`mix phx.new medic`
+
+`cd  medic`
+
+`mix ecto.create`
+
+`mix phx.gen.json Patients Patient patients first_name:string last_name:string phone:string birthdate:string email:string --web admin`
+
+`mix ecto.migrate`
+
+`mix phx.gen.json Practitioners Practitioner practitioners first_name:string last_name:string phone:string birthdate:string email:string --web admin`
+
+`mix ecto.migrate`
+
+`mix phx.gen.json Prescriptions Prescription prescriptions detail:text --web admin`
+
+`mix ecto.migrate`
+
+`mix ecto.gen.migration add_patient_id_to_prescriptions`
+
+`mix ecto.migrate`
+
+`mix ecto.gen.migration add_practitioner_id_to_prescriptions`
+
+`mix ecto.migrate`
