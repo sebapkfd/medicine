@@ -24,6 +24,7 @@ defmodule MedicineWeb.Router do
       pipe_through :api
       resources "/patients", PatientController
       resources "/practitioners", PractitionerController
+      resources "/prescriptions", PractitionerController
 
     end
 
